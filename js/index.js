@@ -199,10 +199,12 @@ $("document").ready(function ($) {
     // menu scroll - footer
     if ($(".footer .menu a").length) {
         $(".footer .menu a").on("click", function (event) {
-            event.preventDefault();
             let aHref = $(this).attr("href");
-            let resualt = $(aHref).offset().top;
-            scrollNavBar(resualt);
+            if (aHref && aHref.startsWith("#")) {
+                event.preventDefault();
+                let resualt = $(aHref).offset().top;
+                scrollNavBar(resualt);
+            }
         });
     }
 

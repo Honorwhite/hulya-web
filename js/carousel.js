@@ -47,7 +47,7 @@ $("document").ready(function ($) {
         nav: false,
         dots: true,
         items: 1,
-        smartSpeed: 1000,
+        smartSpeed: 500,
         autoplay: true,
         autoplayTimeout: 9000,
         mouseDrag: false,
@@ -65,38 +65,40 @@ $("document").ready(function ($) {
 
     // .services__items
     $services.owlCarousel({
-        items: 1,
+        items: 6,
         loop: true,
         nav: false,
         dots: true,
+        margin: 15,
         smartSpeed: 1000,
         autoplay: true,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 5000,
         autoplayHoverPause: true,
         responsiveClass: true,
         responsive: {
             0: {
-                items: 1,
+                items: 3,
                 dots: false,
-                nav: true,
+                nav: false,
+                margin: 10,
             },
 
-            390: {
+            576: {
                 dots: true,
                 nav: false,
-                items: 2,
+                items: 4,
             },
 
             768: {
                 dots: true,
                 nav: false,
-                items: 3,
+                items: 5,
             },
 
-            992: {
+            1200: {
                 dots: true,
                 nav: false,
-                items: 4,
+                items: 6,
             },
         }
     });

@@ -13,25 +13,29 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    & > .icon1 {
+
+    &>.icon1 {
       position: absolute;
       left: -10px;
       bottom: -10px;
       width: 100%;
       max-width: 976px;
-      & > img {
+
+      &>img {
         width: 100%;
         height: 100%;
       }
     }
-    & > .icon {
+
+    &>.icon {
       opacity: 0.025;
       position: absolute;
       left: -37px;
       bottom: 0px;
       width: 100%;
       max-width: 1570px;
-      & > img {
+
+      &>img {
         width: 100%;
         height: 100%;
       }
@@ -42,12 +46,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    & > div {
+    &>div {
       width: 50%;
       display: flex;
       justify-content: space-around;
 
-      & > .footer__top-blocks {
+      &>.footer__top-blocks {
         // background-color: red;
         max-width: 270px;
         flex: 0 0 270px;
@@ -58,15 +62,17 @@
         // flex-direction: column;
         // align-items: center;
         color: $light-col;
+
         a {
           color: $light-col;
           transition: all 0.3s linear;
+
           &:hover {
             color: $primary-pink-2;
           }
         }
 
-        & > .title {
+        &>.title {
           margin-left: 1px;
           margin-top: 3px;
           margin-bottom: 38px;
@@ -75,6 +81,7 @@
           font-family: $BebasBold;
           position: relative;
           width: 100%;
+
           &:after {
             content: "";
             position: absolute;
@@ -87,12 +94,13 @@
         }
 
         .content {
+
           // first-block
           .content-item {
             display: flex;
             margin-bottom: 22px;
 
-            & > .icon {
+            &>.icon {
               width: 40px;
               min-width: 40px;
             }
@@ -117,13 +125,14 @@
               display: inline-block;
               background-color: $primary-blue;
 
-              & > .fa {
+              &>.fa {
                 margin-left: 5px;
               }
             }
           }
+
           .work-date {
-            & > li {
+            &>li {
               font-size: 16px;
               width: 220px;
               display: flex;
@@ -136,8 +145,9 @@
       }
 
       &:last-child {
-        & > .footer__top-blocks {
+        &>.footer__top-blocks {
           margin-bottom: 50px;
+
           &:nth-child(1) {
             .content {
               .text {
@@ -152,6 +162,7 @@
                 overflow: hidden;
                 border-radius: 8px;
                 height: 80px;
+
                 input {
                   border-radius: 8px;
                   position: relative;
@@ -163,12 +174,14 @@
                   outline: none;
                   border: none;
                   font-size: 17px;
+
                   &:hover,
                   &:focus,
                   &:active {
                     outline: 1px solid $primary-pink-2;
                   }
                 }
+
                 button {
                   cursor: pointer;
                   height: 40px;
@@ -180,11 +193,13 @@
                   background-color: $primary-pink-2;
                   outline: none;
                   border: none;
+
                   .fa {
                     font-size: 20px;
                     color: $light-col;
                   }
                 }
+
                 label {
                   font-size: 15.5px;
                   position: relative;
@@ -196,11 +211,12 @@
               .socials {
                 margin-top: 20px;
 
-                & > a {
+                &>a {
                   display: inline-block;
                   height: 30px;
                   width: 20px;
                   margin-right: 12px;
+
                   .fa {
                     display: block;
                     text-align: left;
@@ -208,6 +224,7 @@
                     font-size: 18px;
                     color: $light-col;
                     transition: all 0.3s linear;
+
                     &:hover {
                       color: $primary-pink-2;
                     }
@@ -221,12 +238,14 @@
             .content {
               .menu {
                 padding-top: 2px;
-                & > li {
+
+                &>li {
                   height: 48px;
 
-                  & > a {
+                  &>a {
                     font-family: $RobLight;
                     display: block;
+
                     .fa {
                       margin-right: 10px;
                     }
@@ -244,18 +263,22 @@
     text-align: center;
     margin-bottom: $title-space - 60px;
   }
+
   &__top {
     position: relative;
     padding-top: $section-space;
     // padding-bottom: $section-space - 140px;
     border-bottom: 1px solid #25315c;
   }
+
   &__bottom {
     position: relative;
     padding: 25px;
+
     p {
-      padding: 0;margin: 0;
-      color: #555f81;
+      padding: 0;
+      margin: 0;
+      color: #8e3549;
       text-align: center;
     }
   }

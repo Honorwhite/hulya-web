@@ -10,8 +10,9 @@
   transition: all 0.7s linear;
 
   &_white-transparent {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
     background-color: rgba(255, 255, 255, 0.6);
+
     .navbar {
       &__menu-link {
         color: $text-col;
@@ -59,6 +60,7 @@
       &:hover span:before {
         width: 25px;
       }
+
       &:hover span:after {
         width: 15px;
       }
@@ -113,14 +115,16 @@
         margin-right: 37px;
         position: relative;
         cursor: pointer;
+
         &:hover {
-          & > .navbar__menu-link {
-            color: $primary-pink-2!important;
+          &>.navbar__menu-link {
+            color: $primary-pink-2 !important;
           }
-          & > .navbar__submenu {
+
+          &>.navbar__submenu {
             display: block;
             // animation-play-state: running;
-          }   
+          }
         }
       }
 
@@ -163,7 +167,7 @@
 
     &__submenu {
       display: none;
-      animation: navbarShowAnimation .6s ease-in-out!important;
+      animation: navbarShowAnimation .6s ease-in-out !important;
       position: absolute;
       left: -17%;
       top: 70px;
@@ -236,7 +240,7 @@
           transition: 0.3s ease;
         }
 
-        &:hover > path {
+        &:hover>path {
           fill: $primary-pink-2 !important;
         }
       }
@@ -245,7 +249,7 @@
     &__bag {
       position: relative;
 
-      & > .checkBox {
+      &>.checkBox {
         position: absolute;
         top: 57px;
         left: 0;
@@ -255,49 +259,57 @@
         background-color: $light-col;
         overflow: auto;
         display: none;
-        & > .products {
+
+        &>.products {
           border-bottom: 1px solid #e6e6e6;
-          & > .products-item {
+
+          &>.products-item {
             height: 90px;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            & > .img {
+            &>.img {
               border: 1px solid #e6e6e6;
               flex: 0 0 90px;
               max-width: 90px;
               height: 90px;
               overflow: hidden;
-              & > img {
+
+              &>img {
                 height: 100%;
                 width: 100%;
                 object-fit: contain;
                 object-position: center center;
               }
             }
-            & > .text {
+
+            &>.text {
               width: 120px;
               display: flex;
               flex-direction: column;
               justify-content: center;
-              & > .name {
+
+              &>.name {
                 font-size: 18px;
                 color: $text-col;
                 font-family: $RobBold;
               }
-              & > .price {
+
+              &>.price {
                 font-size: 16px;
                 line-height: 16px;
                 font-weight: 400;
                 color: $text-col-2;
               }
             }
-            & > .fa-remove {
+
+            &>.fa-remove {
               font-size: 20px;
               cursor: pointer;
               transition: all 0.3s ease-in-out;
+
               &:hover {
                 color: $primary-pink-2;
               }
@@ -305,33 +317,34 @@
           }
         }
 
-        & > .products-total {
+        &>.products-total {
           padding-bottom: 20px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          & > span {
+
+          &>span {
             font-size: 16px;
             line-height: 16px;
             font-family: $RobBold;
             color: $text-col;
 
-            & > span {
-                font-size: 16px;
-                line-height: 16px;
-                font-family: $RobBold;
-                color: $text-col;
+            &>span {
+              font-size: 16px;
+              line-height: 16px;
+              font-family: $RobBold;
+              color: $text-col;
             }
           }
         }
 
-        & > .btn {
+        &>.btn {
           width: 100%;
           text-align: center;
         }
       }
 
-      & > svg {
+      &>svg {
         padding-top: 2px;
         margin-right: 8px;
         cursor: pointer;
@@ -340,7 +353,7 @@
           transition: 0.3s ease;
         }
 
-        &:hover > path {
+        &:hover>path {
           fill: $primary-pink-2 !important;
         }
       }
