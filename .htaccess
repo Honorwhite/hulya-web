@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# 1. Hide index.html by redirecting it to the root
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [L,R=301]
+
+# 2. Redirect /page.html to /page (External Redirect for SEO)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html\ HTTP/ [NC]
+RewriteRule ^(.+)\.html$ /$1 [L,R=301]
+
+# 3. Internally map /page to /page.html (Internal Rewrite)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
