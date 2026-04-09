@@ -146,16 +146,18 @@ $("document").ready(function ($) {
                 if ($(this).siblings(".navbar__submenu").length) {
                     $(this).siblings(".navbar__submenu").slideToggle();
                     $(this).parent(".navbar__menu-item").siblings(".navbar__menu-item").find(".navbar__submenu").slideUp();
+                    return false;
                 }
-                return false;
             });
         }
         else {
             fixedMenu();
             $(".navbar__menu-link").click(function () {
-                $(this).siblings(".navbar__submenu").slideToggle();
-                $(this).parent(".navbar__menu-item").siblings(".navbar__menu-item").find(".navbar__submenu").slideUp();
-                return true;
+                if ($(this).siblings(".navbar__submenu").length) {
+                    $(this).siblings(".navbar__submenu").slideToggle();
+                    $(this).parent(".navbar__menu-item").siblings(".navbar__menu-item").find(".navbar__submenu").slideUp();
+                    return false;
+                }
             });
         }
     }
