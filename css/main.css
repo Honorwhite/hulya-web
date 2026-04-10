@@ -7431,6 +7431,10 @@ a:hover {
   }
 }
 
+.footer-logo {
+  width: 30vh;
+}
+
 .footer__top {
   position: relative;
   z-index: 99;
@@ -16230,6 +16234,12 @@ a:hover {
   padding-bottom: 30px;
 }
 
+@media (max-width: 767px) {
+  .faqs>.container>.article .faqs__controls {
+    display: none !important;
+  }
+}
+
 .faqs>.container>.article .faqs__controls-lists {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20099,19 +20109,54 @@ body {
   /*---------- End .latest-news responsive ----------*/
   /*---------- Start .footer responsive ----------*/
   .footer__top {
-    padding-top: 100px;
+    padding-top: 20px;
   }
 
   .footer .container>div {
     width: 100%;
-    -webkit-box-orient: vertical;
+    display: flex;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     text-align: center;
+  }
+
+  .footer-logo {
+    width: 120px;
+  }
+
+  .footer__logo {
+    margin-bottom: 5px;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .footer .container>div>.footer__top-blocks {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    max-width: none;
+  }
+
+  /* Iletisim full width */
+  .footer .container>div>.footer__top-blocks:nth-child(2) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* Kurumsal and Blog side by side */
+  .footer .container>div>.footer__top-blocks:nth-child(3),
+  .footer .container>div>.footer__top-blocks:nth-child(4) {
+    width: 50%;
+    padding: 0 10px;
   }
 
   .footer .container>div>.footer__top-blocks .socials>a:last-child {
@@ -20119,16 +20164,17 @@ body {
   }
 
   .footer .container>div>.footer__top-blocks>.title {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    padding-bottom: 0;
   }
 
   .footer .container>div>.footer__top-blocks>.title:after {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    display: none;
   }
 
   .footer .container>div>.footer__top-blocks .content .content-item {
+    margin-bottom: 4px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -20140,13 +20186,22 @@ body {
 
   .footer .container>div>.footer__top-blocks .content .content-item:first-child .text a {
     display: block;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
-    line-height: 1.3;
+    line-height: 1.2;
+  }
+
+  .footer .container>div>.footer__top-blocks .content .menu>li {
+    height: auto !important;
+    margin-bottom: 4px;
+  }
+
+  .footer .container>div>.footer__top-blocks .content .menu>li>a {
+    font-size: 13px;
   }
 
   .footer .container>div>.footer__top-blocks .content .work-date>li {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   .footer .container>div:last-child>.footer__top-blocks:nth-child(1) .content form {
@@ -20156,6 +20211,14 @@ body {
 
   .footer .container>div:last-child>.footer__top-blocks:nth-child(2) .content .menu>li>a .fa {
     display: none;
+  }
+
+  .footer__bottom {
+    padding: 15px;
+  }
+
+  .footer__bottom p {
+    font-size: 13px;
   }
 
   /*---------- End .footer responsive ----------*/
@@ -21819,7 +21882,7 @@ body {
   /*****************************************************/
   /*---------- start .faqs responsive ------------*/
   .faqs>.container {
-    padding-top: 430px;
+    padding-top: 50px;
   }
 
   /*---------- End .other-services-2 responsive ----------*/
@@ -21875,6 +21938,11 @@ body {
   body {
     padding-bottom: 70px;
     /* Space for fixed nav */
+  }
+
+  .to-top {
+    bottom: 85px !important;
+    right: 20px !important;
   }
 
   .mobile-bottom-nav {
