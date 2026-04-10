@@ -22091,6 +22091,7 @@ body {
     white-space: nowrap;
     border-radius: 20px !important;
     border: none !important;
+    color: #fff !important;
   }
 
   .pwa-popup--expanded .pwa-main-btn {
