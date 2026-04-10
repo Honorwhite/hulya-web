@@ -10,6 +10,118 @@ $("document").ready(function ($) {
         $(window).scrollTop(0);
     });
 
+    // --- 3D Stack Slider Logic ---
+    function initStackSlider() {
+        const wrapper = $('.stack-slider-wrapper');
+        const items = $('.stack-item');
+        if (items.length === 0) return;
+
+        let currentIndex = 0;
+        let autoPlayInterval;
+        let isDragging = false;
+        let startX = 0;
+
+        function updateSlider() {
+            items.removeClass('active prev next hidden');
+            
+            const total = items.length;
+            const prevIndex = (currentIndex - 1 + total) % total;
+            const nextIndex = (currentIndex + 1) % total;
+
+            items.each(function(index) {
+                if (index === currentIndex) {
+                    $(this).addClass('active');
+                } else if (index === prevIndex) {
+                    $(this).addClass('prev');
+                } else if (index === nextIndex) {
+                    $(this).addClass('next');
+                } else {
+                    $(this).addClass('hidden');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateSlider();
+            resetAutoPlay();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateSlider();
+            resetAutoPlay();
+        }
+
+        $('.stack-next').on('click', function(e) {
+            e.preventDefault();
+            nextSlide();
+        });
+
+        $('.stack-prev').on('click', function(e) {
+            e.preventDefault();
+            prevSlide();
+        });
+
+        // Click item to go to it
+        items.on('click', function(e) {
+            const index = $(this).index();
+            if (index !== currentIndex) {
+                e.preventDefault();
+                currentIndex = index;
+                updateSlider();
+                resetAutoPlay();
+            }
+        });
+
+        // Swipe / Drag Support
+        wrapper.on('mousedown touchstart', function(e) {
+            isDragging = true;
+            startX = e.type === 'mousedown' ? e.pageX : e.originalEvent.touches[0].pageX;
+        });
+
+        $(document).on('mousemove touchmove', function(e) {
+            if (!isDragging) return;
+        });
+
+        $(document).on('mouseup touchend', function(e) {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            const endX = e.type === 'mouseup' ? e.pageX : e.originalEvent.changedTouches ? e.originalEvent.changedTouches[0].pageX : startX;
+            const diffX = startX - endX;
+
+            if (Math.abs(diffX) > 50) { // Threshold for swipe
+                if (diffX > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        });
+
+        // Auto play logic
+        function startAutoPlay() {
+            clearInterval(autoPlayInterval);
+            autoPlayInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % items.length;
+                updateSlider();
+            }, 3500); 
+        }
+
+        function resetAutoPlay() {
+            startAutoPlay();
+        }
+
+        wrapper.on('mouseenter', () => clearInterval(autoPlayInterval));
+        wrapper.on('mouseleave', startAutoPlay);
+
+        startAutoPlay();
+        updateSlider();
+    }
+
+    initStackSlider();
+
     // Page Transitions
     $(".page").addClass("is-visible");
 

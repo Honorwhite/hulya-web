@@ -11133,8 +11133,8 @@ a:hover {
 /**************************************************/
 .latest-news-4 {
   position: relative;
-  padding-top: 160px;
-  padding-bottom: 140px;
+  padding-top: 100px;
+  padding-bottom: 40px;
 }
 
 .latest-news-4>.container {
@@ -21867,230 +21867,668 @@ body {
   display: flex !important;
   align-items: center !important;
 }
+
 /*--------------------------------------------------------------
 # Mobile Bottom Navigation & PWA Banner
 --------------------------------------------------------------*/
 @media (max-width: 767px) {
-    body {
-        padding-bottom: 70px; /* Space for fixed nav */
+  body {
+    padding-bottom: 70px;
+    /* Space for fixed nav */
+  }
+
+  .mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    border-top: 1px solid #eee;
+  }
+
+  .mobile-bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    flex: 1;
+    transition: all 0.3s;
+  }
+
+  .mobile-bottom-nav .nav-item i {
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: #f22283;
+    /* Pink theme */
+  }
+
+  .mobile-bottom-nav .nav-item.whatsapp i {
+    color: #25D366;
+    /* WhatsApp Green */
+  }
+
+  .mobile-bottom-nav .nav-item span {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  /* PWA Popup Slim Bar Style */
+  .pwa-popup {
+    position: fixed;
+    bottom: 80px;
+    left: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 8px 15px;
+    z-index: 9999;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    animation: slideUpPopup 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(242, 34, 131, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .pwa-popup--expanded {
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+
+  @keyframes slideUpPopup {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
     }
 
-    .mobile-bottom-nav {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 70px;
-        background: #fff;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-        z-index: 9999;
-        border-top: 1px solid #eee;
+    to {
+      transform: translateY(0);
+      opacity: 1;
     }
+  }
 
-    .mobile-bottom-nav .nav-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
-        color: #333;
-        flex: 1;
-        transition: all 0.3s;
-    }
+  .pwa-popup__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
 
-    .mobile-bottom-nav .nav-item i {
-        font-size: 20px;
-        margin-bottom: 4px;
-        color: #f22283; /* Pink theme */
-    }
+  .pwa-popup--expanded .pwa-popup__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .mobile-bottom-nav .nav-item.whatsapp i {
-        color: #25D366; /* WhatsApp Green */
-    }
+  .pwa-popup__close {
+    order: 3;
+    font-size: 20px;
+    color: #bbb;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+  }
 
-    .mobile-bottom-nav .nav-item span {
-        font-size: 12px;
-        font-weight: 500;
-    }
+  .pwa-popup--expanded .pwa-popup__close {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+  }
 
-    /* PWA Popup Slim Bar Style */
-    .pwa-popup {
-        position: fixed;
-        bottom: 80px;
-        left: 15px;
-        right: 15px;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 50px;
-        padding: 8px 15px;
-        z-index: 9999;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        animation: slideUpPopup 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid rgba(242, 34, 131, 0.15);
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        transition: all 0.3s ease;
-    }
+  .pwa-popup__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+  }
 
-    .pwa-popup--expanded {
-        border-radius: 20px;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 20px;
-    }
+  .pwa-popup__icon {
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
 
-    @keyframes slideUpPopup {
-        from { transform: translateY(100px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
+  .pwa-popup--expanded .pwa-popup__icon {
+    width: 50px;
+    height: 50px;
+  }
 
-    .pwa-popup__content {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        gap: 10px;
-    }
+  .pwa-popup__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    .pwa-popup--expanded .pwa-popup__content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .pwa-popup__title {
+    font-family: "BebasNeueBold";
+    color: #f22283;
+    font-size: 15px;
+    margin: 0;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
 
-    .pwa-popup__close {
-        order: 3;
-        font-size: 20px;
-        color: #bbb;
-        cursor: pointer;
-        padding: 5px;
-        line-height: 1;
-    }
+  .pwa-popup--expanded .pwa-popup__title {
+    font-size: 20px;
+    white-space: normal;
+  }
 
-    .pwa-popup--expanded .pwa-popup__close {
-        position: absolute;
-        top: -10px;
-        right: -5px;
-    }
+  .pwa-popup__subtitle {
+    font-size: 11px;
+    color: #888;
+    margin: 0;
+    display: none;
+  }
 
-    .pwa-popup__header {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex: 1;
-    }
+  .pwa-popup--expanded .pwa-popup__subtitle {
+    font-size: 13px;
+    margin-bottom: 15px;
+    display: block;
+  }
 
-    .pwa-popup__icon {
-        width: 32px;
-        height: 32px;
-        background: #fff;
-        border-radius: 8px;
-        padding: 3px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        flex-shrink: 0;
-    }
+  .pwa-popup__ios-instructions {
+    background: rgba(242, 34, 131, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 3px solid #f22283;
+    width: 100%;
+  }
 
-    .pwa-popup--expanded .pwa-popup__icon {
-        width: 50px;
-        height: 50px;
-    }
+  .instruction-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
 
-    .pwa-popup__icon img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+  .step-num {
+    background: #f22283;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
 
-    .pwa-popup__title {
-        font-family: "BebasNeueBold";
-        color: #f22283;
-        font-size: 15px;
-        margin: 0;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
-    }
+  .instruction-step p {
+    font-size: 12px;
+    color: #444;
+    margin: 0;
+    line-height: 1.4;
+  }
 
-    .pwa-popup--expanded .pwa-popup__title {
-        font-size: 20px;
-        white-space: normal;
-    }
+  .pwa-popup__actions {
+    order: 2;
+  }
 
-    .pwa-popup__subtitle {
-        font-size: 11px;
-        color: #888;
-        margin: 0;
-        display: none;
-    }
+  .pwa-main-btn {
+    width: auto !important;
+    padding: 6px 15px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap;
+    border-radius: 20px !important;
+    border: none !important;
+  }
 
-    .pwa-popup--expanded .pwa-popup__subtitle {
-        font-size: 13px;
-        margin-bottom: 15px;
-        display: block;
-    }
-
-    .pwa-popup__ios-instructions {
-        background: rgba(242, 34, 131, 0.05);
-        border-radius: 12px;
-        padding: 15px;
-        margin-bottom: 15px;
-        border-left: 3px solid #f22283;
-        width: 100%;
-    }
-
-    .instruction-step {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-        margin-bottom: 10px;
-    }
-
-    .step-num {
-        background: #f22283;
-        color: #fff;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 10px;
-        font-weight: bold;
-        flex-shrink: 0;
-        margin-top: 2px;
-    }
-
-    .instruction-step p {
-        font-size: 12px;
-        color: #444;
-        margin: 0;
-        line-height: 1.4;
-    }
-
-    .pwa-popup__actions {
-        order: 2;
-    }
-
-    .pwa-main-btn {
-        width: auto !important;
-        padding: 6px 15px !important;
-        font-size: 11px !important;
-        letter-spacing: 0.5px !important;
-        white-space: nowrap;
-        border-radius: 20px !important;
-        border: none !important;
-    }
-
-    .pwa-popup--expanded .pwa-main-btn {
-        display: none;
-    }
+  .pwa-popup--expanded .pwa-main-btn {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
-    .pwa-popup, .mobile-bottom-nav {
-        display: none !important;
-    }
+
+  .pwa-popup,
+  .mobile-bottom-nav {
+    display: none !important;
+  }
 }
 
 
+
+/*--------------------------------------------------------------
+# Instagram Gallery
+--------------------------------------------------------------*/
+.instagram-gallery {
+  padding: 100px 0;
+  background-color: #fdfdfd;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.instagram-gallery .section-title-group {
+  margin-bottom: 50px;
+}
+
+.instagram-gallery .section-title {
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.instagram-gallery .section-subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.instagram-gallery .instagram-link {
+  display: inline-block;
+  color: #f22283;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.instagram-gallery .instagram-link:hover {
+  color: #8b2e47;
+  border-bottom: 2px solid #8b2e47;
+}
+
+.instagram-carousel {
+  padding: 20px 0 40px;
+}
+
+.instagram-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.instagram-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.instagram-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(139, 46, 71, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+
+.instagram-item .overlay i {
+  color: #fff;
+  font-size: 36px;
+  transform: scale(0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.instagram-item:hover img {
+  transform: scale(1.15);
+}
+
+.instagram-item:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.instagram-item:hover .overlay i {
+  transform: scale(1);
+}
+
+.instagram-carousel .owl-dots {
+  margin-top: 30px !important;
+}
+
+.instagram-carousel .owl-dot span {
+  background: #e0e0e0 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.instagram-carousel .owl-dot.active span {
+  background: #f22283 !important;
+  width: 25px !important;
+}
+
+@media (max-width: 768px) {
+  .instagram-gallery {
+    padding: 60px 0;
+  }
+
+  .instagram-gallery .section-title {
+    font-size: 26px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Modern Social Showcase (Bento Grid)
+--------------------------------------------------------------*/
+.social-showcase {
+  padding: 20px 0;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-bg-blob {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(242, 34, 131, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.social-showcase .container {
+  position: relative;
+  z-index: 1;
+}
+
+.showcase-header {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.showcase-header .eyebrow {
+  display: inline-block;
+  color: #f22283;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 15px;
+  padding: 5px 15px;
+  background: rgba(242, 34, 131, 0.05);
+  border-radius: 50px;
+}
+
+.showcase-title {
+  font-size: 42px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #333 0%, #f22283 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.showcase-header p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.showcase-header::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f22283;
+  margin: 25px auto 0;
+  border-radius: 2px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+}
+
+.bento-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f4f4f4;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.item-medium {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.bento-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.bento-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(139, 46, 71, 0.8), transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.bento-overlay i {
+  color: #fff;
+  font-size: 40px;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bento-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(139, 46, 71, 0.15);
+}
+
+.bento-item:hover img {
+  transform: scale(1.1);
+}
+
+.bento-item:hover .bento-overlay {
+  opacity: 1;
+}
+
+.bento-item:hover .bento-overlay i {
+  transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 250px);
+  }
+}
+
+@media (max-width: 991px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
+  }
+}
+
+@media (max-width: 575px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .bento-item {
+    height: 300px;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .item-large {
+    height: 400px;
+  }
+
+  .social-showcase {
+    padding: 60px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# 3D Stack Slider
+--------------------------------------------------------------*/
+.stack-slider-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  touch-action: pan-y pinch-zoom;
+  /* Allow vertical scroll but handle horizontal swipe */
+  cursor: grab;
+}
+
+.stack-slider-wrapper:active {
+  cursor: grabbing;
+}
+
+.stack-slider {
+  position: relative;
+  width: 350px;
+  height: 450px;
+  transform-style: preserve-3d;
+}
+
+.stack-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  background: #fff;
+  cursor: pointer;
+}
+
+.stack-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Stack Positions */
+.stack-item.active {
+  transform: translate3d(0, 0, 100px) scale(1);
+  z-index: 10;
+  opacity: 1;
+  box-shadow: 0 20px 60px rgba(139, 46, 71, 0.3);
+}
+
+.stack-item.prev {
+  transform: translate3d(-60%, 0, 0) scale(0.8);
+  z-index: 5;
+  opacity: 0.6;
+}
+
+.stack-item.next {
+  transform: translate3d(60%, 0, 0) scale(0.8);
+  z-index: 5;
+  opacity: 0.6;
+}
+
+.stack-item.hidden {
+  transform: translate3d(0, 0, -100px) scale(0.5);
+  z-index: 1;
+  opacity: 0;
+}
+
+/* Controls */
+.stack-controls {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.stack-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #f22283;
+  background: transparent;
+  color: #f22283;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stack-btn:hover {
+  background: #f22283;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .stack-slider-wrapper {
+    height: 450px;
+  }
+
+  .stack-slider {
+    width: 250px;
+    height: 350px;
+  }
+
+  .stack-item.prev {
+    transform: translate3d(-40%, 0, 0) scale(0.8);
+  }
+
+  .stack-item.next {
+    transform: translate3d(40%, 0, 0) scale(0.8);
+  }
+}
