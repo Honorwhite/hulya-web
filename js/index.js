@@ -1,4 +1,55 @@
 $("document").ready(function ($) {
+    // Force scroll to top on load
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+    $(window).scrollTop(0);
+
+    $(window).on('beforeunload', function() {
+        $(window).scrollTop(0);
+    });
+
+    // Page Transitions
+    $(".page").addClass("is-visible");
+
+    $(document).on("click", "a", function (e) {
+        const href = $(this).attr("href");
+        const target = $(this).attr("target");
+
+        // Skip if it's not a standard link, has a target, is an external/special link, or is a fancybox trigger
+        if (!href || 
+            href.startsWith("#") || 
+            href.startsWith("tel:") || 
+            href.startsWith("mailto:") || 
+            href.startsWith("javascript:") ||
+            target === "_blank" || 
+            $(this).data("fancybox") ||
+            $(this).hasClass("owl-prev") ||
+            $(this).hasClass("owl-next") ||
+            e.ctrlKey || e.shiftKey || e.metaKey || e.which === 2) {
+            return;
+        }
+
+        // Only handle links for the same domain (relative links or same origin)
+        const isInternal = href.startsWith("./") || href.startsWith("/") || !href.includes("://") || href.includes(window.location.hostname);
+        
+        if (isInternal) {
+            e.preventDefault();
+            $(".page").removeClass("is-visible").addClass("is-leaving");
+            setTimeout(function () {
+                window.location.href = href;
+            }, 400);
+        }
+    });
+
+    // Reset transitions when navigating back (bfcache)
+    $(window).on("pageshow", function (event) {
+        if (event.originalEvent.persisted) {
+            $(".page").removeClass("is-leaving").addClass("is-visible");
+        }
+    });
+
 
     // scrool - to top btn
     $(window).on("scroll", function () {
