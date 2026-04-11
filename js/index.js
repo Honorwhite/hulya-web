@@ -835,15 +835,15 @@ $("document").ready(function ($) {
         btn.text('GÖNDERİLİYOR...');
         btn.prop('disabled', true);
 
-        // Service ID: service_lfgs6ac | Template ID: template_mlqybeb
-        emailjs.sendForm('service_lfgs6ac', 'template_mlqybeb', form)
+        // Service ID, Template ID ve Public Key doğrudan eklendi (Hata riskini azaltmak için)
+        emailjs.sendForm('service_lfgs6ac', 'template_mlqybeb', form, 'bChlLCDel63s0Idz1')
             .then(function () {
                 alert('Mesajınız başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz.');
                 btn.text(originalBtnText);
                 btn.prop('disabled', false);
                 form.reset();
             }, function (error) {
-                alert('Mesaj gönderilirken bir hata oluştu: ' + JSON.stringify(error));
+                alert('Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin veya doğrudan bizi arayın. (Hata: ' + JSON.stringify(error) + ')');
                 btn.text(originalBtnText);
                 btn.prop('disabled', false);
             });
