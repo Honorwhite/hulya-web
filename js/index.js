@@ -835,8 +835,8 @@ $("document").ready(function ($) {
         btn.text('GÖNDERİLİYOR...');
         btn.prop('disabled', true);
 
-        // Service ID, Template ID ve Public Key doğrudan eklendi (Hata riskini azaltmak için)
-        emailjs.sendForm('service_lfgs6ac', 'template_mlqybeb', form, 'bChlLCDel63s0Idz1')
+        // Service ID, Template ID ve Public Key güncellendi
+        emailjs.sendForm('service_lfgs6ac', 'hulyarandevutemplate', form, 'bChlLCDel63s0Idz1')
             .then(function () {
                 alert('Mesajınız başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz.');
                 btn.text(originalBtnText);
