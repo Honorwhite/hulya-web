@@ -5425,13 +5425,27 @@ a:hover {
   padding-bottom: 20px;
 }
 
+.services-swiper {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.services-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.services-swiper .swiper-slide {
+  width: 250px; /* Fixed width for consistent marquee */
+  height: auto;
+}
+
 .services__card {
   background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  margin: 10px;
   height: 220px;
   display: flex;
   flex-direction: column;

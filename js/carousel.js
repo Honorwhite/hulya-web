@@ -63,45 +63,27 @@ $("document").ready(function ($) {
         }
     });
 
-    // .services__items
-    $services.owlCarousel({
-        items: 6,
+    // Swiper Marquee Implementation
+    const servicesSwiper = new Swiper('.services-swiper', {
         loop: true,
-        nav: false,
-        dots: true,
-        margin: 15,
-        smartSpeed: 1000,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 3,
-                dots: false,
-                nav: false,
-                margin: 10,
-            },
-
-            576: {
-                dots: true,
-                nav: false,
-                items: 4,
-            },
-
-            768: {
-                dots: true,
-                nav: false,
-                items: 5,
-            },
-
-            1200: {
-                dots: true,
-                nav: false,
-                items: 6,
-            },
+        freeMode: true,
+        spaceBetween: 20,
+        grabCursor: true,
+        slidesPerView: 'auto',
+        speed: 3000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            0: { slidesPerView: 2 },
+            576: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            1200: { slidesPerView: 5 }
         }
     });
+
+    // $services removed for marquee implementation
 
     // .testimonials__content-carousel
     $testimonials.owlCarousel({
