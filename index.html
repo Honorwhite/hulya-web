@@ -492,18 +492,18 @@
                     <h1 class="section-title">Uzman Yardımı Alın<br><span>Randevu Oluşturun</span></h1>
                     <p class="subtitle">Sağlığınız bizim için değerli. Randevu talebinizi iletin, size en kısa sürede
                         dönüş yapalım.</p>
-                    <form action="test.html" method="POST">
-                        <input class="form__block-input" type="text" placeholder="Adınız Soyadınız*">
-                        <select class="form__block-input">
-                            <option selected>Hizmet Seçiniz</option>
-                            <option>Gebelik Takibi</option>
-                            <option>Genital Estetik</option>
-                            <option>Jinekolojik Ameliyatlar</option>
-                            <option>Diğer</option>
+                    <form id="contact-form">
+                        <input class="form__block-input" type="text" name="user_name" placeholder="Adınız Soyadınız*" required>
+                        <select class="form__block-input" name="service_type" required>
+                            <option value="" selected disabled>Hizmet Seçiniz</option>
+                            <option value="Gebelik Takibi">Gebelik Takibi</option>
+                            <option value="Genital Estetik">Genital Estetik</option>
+                            <option value="Jinekolojik Ameliyatlar">Jinekolojik Ameliyatlar</option>
+                            <option value="Diğer">Diğer</option>
                         </select>
-                        <input class="form__block-input" type="text" placeholder="Telefon Numaranız*">
-                        <input class="form__block-input" type="text" placeholder="E-posta Adresiniz*">
-                        <textarea placeholder="Mesajınız"></textarea>
+                        <input class="form__block-input" type="text" name="user_phone" placeholder="Telefon Numaranız*" required>
+                        <input class="form__block-input" type="email" name="user_email" placeholder="E-posta Adresiniz*" required>
+                        <textarea name="message" placeholder="Mesajınız"></textarea>
                         <button type="submit" class="btn btn_blue">TALEP GÖNDER</button>
                         <label>* Kişisel verileriniz gizli tutulacaktır.</label>
                     </form>
@@ -984,6 +984,13 @@
                 });
             }
         });
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Public Key güncellendi
+            emailjs.init("bChlLCDel63s0Idz1");
+        })();
     </script>
     <script src="./js/index.js"></script>
 </body>
