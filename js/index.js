@@ -180,17 +180,14 @@ $("document").ready(function ($) {
     fixedMenu();
     function fixedMenu() {
         if ($(window).innerWidth() >= 1200) {
-            if (window.pageYOffset >= 80) {
+            if (window.pageYOffset >= 50) {
                 $(".header-middle").css({
-                    "position": "fixed",
-                    "top": "0",
-                    "left": "0",
-                    "background-color": "rgba(255, 255, 255, .9)",
-                    "box-shadow": "0 0 20px rgba(0,0,0, .3)",
+                    "background-color": "rgba(255, 255, 255, .95)",
+                    "box-shadow": "0 0 20px rgba(0,0,0, .1)",
                 });
 
                 $(".header-middle_transparent").css({
-                    "background-color": "rgba(255, 255, 255, .9)",
+                    "background-color": "rgba(255, 255, 255, .95)",
                 });
 
                 $(".header-middle_transparent .navbar__menu-link").css(
@@ -210,9 +207,8 @@ $("document").ready(function ($) {
                     .addClass("cls-3");
             } else {
                 $(".header-middle").css({
-                    "position": "relative",
-                    "top": "initial",
-                    "left": "initial",
+                    "background-color": "rgba(255, 255, 255, .6)",
+                    "box-shadow": "none",
                 });
 
                 $(".header-middle_white-transparent").css({
@@ -242,6 +238,10 @@ $("document").ready(function ($) {
             }
         } else {
             // if window < 1200
+            $(".header-middle").css({
+                "background-color": "rgba(255, 255, 255, .95)",
+                "box-shadow": "0 0 10px rgba(0,0,0, .1)",
+            });
 
             $(
                 ".header-middle_transparent .navbar__menu-link, .header-middle_transparent .navbar__bag-price"
@@ -254,22 +254,6 @@ $("document").ready(function ($) {
             ).css({
                 "fill": "#333333",
             });
-
-            if (window.pageYOffset >= 0) {
-                $(".header-middle").css({
-                    "position": "fixed",
-                    "top": "0",
-                    "left": "0",
-                    "background-color": "rgba(255, 255, 255, .9)",
-                });
-            } else {
-                $(".header-middle").css({
-                    "position": "relative",
-                    "top": "initial",
-                    "left": "initial",
-                    "background-color": "rgba(255, 255, 255, .6)",
-                });
-            }
         }
     }
 

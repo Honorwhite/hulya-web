@@ -169,24 +169,16 @@ These are css styles, others're attached
 
 .page {
   opacity: 0;
-  -webkit-transform: scale(0.99);
-  transform: scale(0.99);
-  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
-  transition: opacity 0.4s ease, -webkit-transform 0.4s ease;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  transition: opacity 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
 }
 
 .page.is-visible {
   opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
 }
 
 .page.is-leaving {
   opacity: 0;
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
 }
 
 body,
@@ -228,8 +220,15 @@ ol {
 }
 
 .page {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #ffffff;
+  padding-top: 150px;
+}
+
+@media (max-width: 1199px) {
+  .page {
+    padding-top: 70px;
+  }
 }
 
 .section-title {
@@ -4591,8 +4590,11 @@ a:hover {
 /* .header-top */
 /**************************************************/
 .header-top {
-  z-index: 11;
-  position: relative;
+  z-index: 1100;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  width: 100%;
   background-color: #e4acba;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
@@ -4679,12 +4681,20 @@ a:hover {
 /* .header-middle */
 /**************************************************/
 .header-middle {
-  position: relative;
-  z-index: 1050;
+  position: fixed !important;
+  top: 80px !important;
+  left: 0;
   width: 100%;
+  z-index: 1050;
   height: 70px;
   -webkit-transition: all 0.7s linear;
   transition: all 0.7s linear;
+}
+
+@media (max-width: 1199px) {
+  .header-middle {
+    top: 0 !important;
+  }
 }
 
 .header-middle_white-transparent {
