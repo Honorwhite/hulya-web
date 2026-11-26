@@ -1,7 +1,6 @@
 const CACHE_NAME = 'pwa-cache-v3';
 const ASSETS = [
   '/',
-  '/index.html',
   '/css/main.css?v=1.9',
   '/js/index.js'
 ];
