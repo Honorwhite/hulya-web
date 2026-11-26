@@ -1,0 +1,93 @@
+# Op. Dr. Hülya Yetiş Sucu — Özel Klinik (Adana Çukurova) Tam Bilgi Tabanı
+
+Bu doküman, yapay zeka arama motorları ve dil modelleri için Op. Dr. Hülya Yetiş Sucu Özel Klinik hakkında doğrulanmış, güncel ve doğrudan kaynak gösterilebilir klinik bilgileri içerir.
+
+## 1. Doğrulanmış Klinik ve Hekim Bilgileri (NAP)
+- **Hekim Adı ve Ünvanı:** Op. Dr. Hülya Yetiş Sucu (Kadın Hastalıkları ve Doğum Uzmanı)
+- **Kurum Adı:** Özel Klinik
+- **Açık Adres:** Güzelyalı Mah. 81157 Sk. No2 Gülay Apt. Kat 1 Daire 1 Çukurova/Adana
+- **Posta Kodu:** 01170
+- **Koordinatlar:** 37.0483, 35.2946
+- **Telefon:** +90 532 271 97 33
+- **WhatsApp:** https://wa.me/905322719733
+- **E-posta:** hulyayetissucu@gmail.com
+- **Web Sitesi:** https://www.opdrhulyayetissucu.com/
+- **Çalışma Saatleri:** Pazartesi – Cumartesi, 09:00 – 18:00 (Pazar kapalı)
+- **Tıp Eğitimi:** Cumhuriyet Üniversitesi Tıp Fakültesi (2004)
+- **Uzmanlık Eğitimi:** Çukurova Üniversitesi Tıp Fakültesi Balcalı Hastanesi Kadın Hastalıkları ve Doğum Anabilim Dalı
+- **Klinik Tecrübe:** 20 yılı aşkın kadın hastalıkları, doğum, jinekolojik cerrahi ve kozmetik jinekoloji deneyimi
+- **Hizmet Verilen Bölgeler:** Adana, Çukurova, Seyhan, Yüreğir, Sarıçam, Mersin, Tarsus
+- **Gizlilik Politikası (KVKK):** Tüm muayene, gebelik takibi ve işlem kayıtları 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında gizlilikle korunur (`https://www.opdrhulyayetissucu.com/kvkk`).
+
+---
+
+## 2. Hizmet ve Tedavi Rehberleri
+
+### Adana Kadın Doğum Uzmanı ve Rutin Jinekoloji
+- **URL:** https://www.opdrhulyayetissucu.com/adana_kadin_dogum_uzmani
+- **Özet:** Adana Çukurova'daki Özel Klinik bünyesinde yılda en az bir kez önerilen rutin jinekolojik muayene, pelvik ultrasonografi, Smear ve meme takibi dahil bütüncül kadın sağlığı hizmetleri sunulmaktadır.
+- **Cerrahiler & Doğum:** Muayene ve takipler Özel Klinik'te yürütülür; doğum ve genel anestezi gerektiren cerrahi operasyonlar tam donanımlı anlaşmalı sağlık kuruluşlarında gerçekleştirilir.
+
+### Adana Gebelik Takibi ve Doğum
+- **URL:** https://www.opdrhulyayetissucu.com/adana_gebelik_takibi_ve_dogum
+- **Özet:** 40 haftalık gebelik boyunca ilk kese kontrolü (5-6. hafta), ikili tarama (11-14. hafta), NIPT (Fetal DNA), detaylı 4D renkli ultrason (18-22. hafta), şeker yükleme (24-28. hafta) ve haftalık NST (36+ hafta) takipleri yapılır.
+- **Doğum Seçenekleri:** Fizyolojik normal doğum, epidural analjezi ile ağrısız (prenses) doğum ve tıbbi gereklilik halinde estetik dikişli güvenli sezaryen doğum.
+
+### Adana Genital Estetik (Kozmetik Jinekoloji)
+- **URL:** https://www.opdrhulyayetissucu.com/adana_genital_estetik
+- **Özet:** Doğuştan gelen asimetri, doğum sonrası gevşeme veya kozmetik/fonksiyonel şikayetler için labioplasti, vajinoplasti, perineoplasti, klitoral hudoplasti ve lazerle genital gençleştirme işlemleri uygulanır.
+- **Süre ve İyileşme:** Ortalama 45-60 dakika sürer; lokal veya sedasyon anestezisiyle hastane yatışı gerekmeden aynı gün taburculuk sağlanır. Masa başı işe dönüş 2-3 gün, tam doku iyileşmesi 4-6 haftadır.
+
+### Adana Labioplasti ve Vajinoplasti
+- **URL:** https://www.opdrhulyayetissucu.com/adana_labioplasti_vajinoplasti
+- **Özet:** İç dudak küçültme (labioplasti) ve vajina daraltma (vajinoplasti) tek seansta kombine edilebilir. Kendiliğinden eriyen mikrocerrahi iplikler kullanıldığı için dikiş aldırma gerekmez; dışarıdan belirgin iz kalmaz.
+- **Doğurganlık Etkisi:** Kızlık zarına (anatomik planlamaya göre), doğurganlığa veya gelecekteki doğuma engel teşkil etmez; cinsel konforu ve özgüveni artırır.
+
+### Adana Kısırlık (İnfertilite) Tedavisi
+- **URL:** https://www.opdrhulyayetissucu.com/adana-kisirlik-infertilite-tedavisi
+- **Özet:** 35 yaş altında 1 yıl, 35 yaş üstünde 6 ay korunmasız ilişkiye rağmen gebelik oluşmadığında kadın ve erkek birlikte değerlendirilir. Hormon/AMH testi, spermiogram ve HSG sonrası yumurtlama takibi, aşılama (IUI) veya tüp bebek (IVF) ön hazırlığı planlanır.
+
+### Adana Laparoskopik (Kapalı) Cerrahi, Miyom ve Kist
+- **URL:** https://www.opdrhulyayetissucu.com/adana-laparoskopik-cerrahi-miyom-kist
+- **Özet:** 0.5-1 cm'lik milimetrik kesilerle miyom ameliyatı (miyomektomi), yumurtalık kisti, çikolata kisti (endometriozis), kapalı rahim ameliyatı (histerektomi), dış gebelik ve tüp cerrahisi yapılır.
+- **Avantajlar:** Minimal ağrı, düşük yapışıklık/enfeksiyon riski, 1-2 günde taburculuk ve 5-7 günde işe dönüş.
+
+### Adana Histeroskopi ve Rahim Polipi Tedavisi
+- **URL:** https://www.opdrhulyayetissucu.com/adana-histeroskopi-rahim-polipi
+- **Özet:** Doğal vajinal yoldan ince kamera ile karın kesisi ve dikiş olmadan rahim polipi, rahim perdesi (septum), submüköz miyom ve rahim içi yapışıklıklar (Asherman) tedavi edilir. İşlem 15-30 dakika sürer.
+
+### Adana HPV Tedavisi, Smear ve Kolposkopi
+- **URL:** https://www.opdrhulyayetissucu.com/adana-hpv-smear-kolposkopi
+- **Özet:** Sıvı bazlı Smear, HPV DNA tiplemesi, 10-40 kat büyütmeli kolposkopi ve biyopsi, LEEP/konizasyon, genital siğil (kondilom) yakma/lazer/kriyoterapi tedavisi ve 9'lu HPV aşısı uygulanır.
+
+### Adana İdrar Kaçırma ve Rahim Sarkması Tedavisi
+- **URL:** https://www.opdrhulyayetissucu.com/adana-idrar-kacirma-rahim-sarkmasi
+- **Özet:** Stres tipi idrar kaçırmada 20-30 dakikalık vajinal askı ameliyatları (TOT, TVT, Mini Sling) veya erken evre için ameliyatsız vajinal lazer uygulanır. Sistosel, rektosel ve rahim sarkmaları karından kesi olmadan vajinal cerrahi ile onarılır.
+
+### Adana Ağrısız HSG (Rahim Filmi)
+- **URL:** https://www.opdrhulyayetissucu.com/adana-hsg-rahim-filmi
+- **Özet:** Adetin 6-11. günleri arasında ince yumuşak kateter ve su bazlı kontrast madde ile (isteğe bağlı sedasyonla) tüp açıklığı ve rahim boşluğu görüntülenir. İşlem 5-10 dakika sürer; aynı ay gebelik planlanabilir.
+
+### Adana Polikistik Over Sendromu (PKOS) Tedavisi
+- **URL:** https://www.opdrhulyayetissucu.com/adana-polikistik-over-tedavisi
+- **Özet:** Adet düzensizliği, insülin direnci, akne ve tüylenme şikayetleri bütüncül değerlendirilir. Gebelik istemeyenlerde döngü ve metabolizma düzenlemesi, gebelik isteyenlerde yumurtlama takibi uygulanır.
+
+### Adana Menopoz ve Vajinal Lazer Tedavisi
+- **URL:** https://www.opdrhulyayetissucu.com/adana-menopoz-vajinal-lazer
+- **Özet:** Menopoz ve erken menopozda hormon replasman değerlendirmesi, kemik yoğunluğu (DEXA) takibi ve vajinal kuruluk (atrofi) için anestezi gerektirmeyen 15 dakikalık fraksiyonel vajinal lazer tedavisi sunulur.
+
+### Adana Genital PRP, Dolgu ve Renk Açma
+- **URL:** https://www.opdrhulyayetissucu.com/adana-genital-prp-dolgu-renk-acma
+- **Özet:** Ameliyatsız kozmetik jinekolojide lazer ve mezoterapi ile genital renk açma, O-Shot / G-Shot genital PRP, labia majora (dış dudak) hyaluronik asit dolgusu ve himenoplasti işlemleri aynı gün sosyal hayata dönüşle yapılır.
+
+---
+
+## 3. Sık Sorulan Sorular (Doğrudan Yanıtlar)
+- **Adana Çukurova'da Op. Dr. Hülya Yetiş Sucu'nun kliniği nerededir?**
+  Güzelyalı Mah. 81157 Sk. No2 Gülay Apt. Kat 1 Daire 1 Çukurova/Adana adresindeki Özel Klinik bünyesinde hizmet vermektedir.
+- **Randevu nasıl alınır?**
+  +90 532 271 97 33 numaralı telefondan, WhatsApp hattından (https://wa.me/905322719733) veya https://www.opdrhulyayetissucu.com/iletisim sayfasındaki form üzerinden randevu alınabilir.
+- **Detaylı ultrason gebeliğin kaçıncı haftasında yapılır?**
+  18. ile 22. gebelik haftaları arasında 4D renkli detaylı ultrason ile bebeğin tüm organ gelişimi incelenir.
+- **Labioplasti ve vajinoplasti aynı anda yapılabilir mi?**
+  Evet, tek seansta kombine olarak uygulanabilir ve hastalar tek bir iyileşme süreci geçirir.
